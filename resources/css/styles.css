@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	position: relative;
+	font-family: 'Exo', sans-serif;
+	color: #28262c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+.title {
+	text-align: center;
+	margin-top: 10vmin;
+	color: #02c8a7;
+}
+
+.sr-only {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.row {
+	justify-content: center;
+	
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;   
+    flex-wrap: wrap;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+p.project-role {
+	font-style: italic;
+}
+
+main.center {
+	font-size: 5vmin;
+	
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+main.center .content-center {
+	text-align: center;
+}
+
+main.center .info {
+	color: #02c8a7;
+}
+
+main.gallery {
+	font-size: 2.5vmin;
+	line-height: 2;
+	
+	margin: 0 auto 20vmin auto;
+	width: 1200px;
+	max-width: 90%;
+}
+
+main.gallery .gallery-item {
+	text-align: center;
+	cursor: zoom-in;
+}
+
+main.gallery .gallery-item img {
+	width: 100%;
+	max-width: 50vmin;
+    height: 25vmin;
+	object-fit: contain;
+	
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+	
+	transition: all 0.5s ease-in-out;
+}
+
+main.gallery .gallery-item:hover img {
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+main.gallery .gallery-item p {
+	width: 100%;
+	max-width: 50vmin;
+	margin: 0 auto;
+}
+
+main.gallery .gallery-item-title {
+	color: #02c8a7;
+	font-weight: bold;
+}
+
+main.text-content {
+	font-size: 2.5vmin;
+	line-height: 2;
+	
+	margin: 0 auto 20vmin auto;
+	width: 1000px;
+	max-width: 90%;
+}
+
+main.text-content div {
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	font-size: 3vmin;
+	text-align: center;
+}
+
+nav .icon {
+	font-size: 3.5vmin;
+}
+
+nav a {
+	color: #28262c;
+	background-color: #fff;
+	
+	-webkit-transition: background-color 0.5s linear, color 0.5s linear;
+    -moz-transition: background-color 0.5s linear, color 0.5s linear;
+    -o-transition: background-color 0.5s linear, color 0.5s linear;
+    transition: background-color 0.5s linear, color 0.5s linear;
+}
+
+nav a.current {
+	color: #f53240;
+}
+
+nav a:hover {
+	color: #fff;
+	background-color: #f53240;
+}
+
+.color-shift {
+	color: #02c8a7;
+	
+	-webkit-transition: color 0.5s linear;
+    -moz-transition: color 0.5s linear;
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+}
+
+.color-shift:hover {
+	color: #f53240;
+}
+
+.small-pad {
+	padding: 2vmin;
+}
+
+[class*="col-"] {
+    padding: 5vmin;
+}
+
+.col-sm {width:auto;}
+.col-sm-1 {width: 8.33%;}
+.col-sm-2 {width: 16.66%;}
+.col-sm-3 {width: 25%;}
+.col-sm-4 {width: 33.33%;}
+.col-sm-5 {width: 41.66%;}
+.col-sm-6 {width: 50%;}
+.col-sm-7 {width: 58.33%;}
+.col-sm-8 {width: 66.66%;}
+.col-sm-9 {width: 75%;}
+.col-sm-10 {width: 83.33%;}
+.col-sm-11 {width: 91.66%;}
+.col-sm-12 {width: 100%;}
+
+.sticky {
+	position:fixed;
+	bottom: 0;
+	width:100%;
+	text-align:center;
+}
+
+@media only screen and (max-width: 768px) {
+	nav .icon::after {
+		content: "\a";
+		white-space: pre;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.col-md {width: auto;}
+	.col-md-1 {width: 8.33%;}
+	.col-md-2 {width: 16.66%;}
+	.col-md-3 {width: 25%;}
+	.col-md-4 {width: 33.33%;}
+	.col-md-5 {width: 41.66%;}
+	.col-md-6 {width: 50%;}
+	.col-md-7 {width: 58.33%;}
+	.col-md-8 {width: 66.66%;}
+	.col-md-9 {width: 75%;}
+	.col-md-10 {width: 83.33%;}
+	.col-md-11 {width: 91.66%;}
+	.col-md-12 {width: 100%;}
+}
+
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10vmin;
+	
+	/* background position: whole viewport */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* enable scrolling */
+    background-color: rgb(40,38,44); /* no opacity */
+    background-color: rgba(40,38,44,0.4); /* opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    width: 75%;
+	position: relative;
+}
+
+.modal-content img {
+	width: 75%;
+    height: 75%;
+	object-fit: contain;
+	cursor: zoom-out;
+}
+
+.modal .prev, .modal .next {
+	cursor: pointer;
+	position: fixed;
+	top: 40%;
+	font-size: 5vmin;
+	padding: 5vmin;
+	
+	transition: all 0.5s ease-in-out;
+}
+
+.modal .prev:hover, .modal .next:hover {
+	color: #02c8a7;
+	transform: scale(1.5);
+}
+
+.modal .prev {
+	left: 12%;
+}
+
+.modal .next {
+	right: 12%;
+}
+
+.modal .dots {
+	position: fixed;
+	top: 75%;
+	font-size: 5vmin;
+	width: 75%; /* same with modal width */
+	text-align: center;
+}
+
+.modal .dots .pts-dot, .modal .dots .phd-dot, .modal .dots .chances-dot {
+	cursor: pointer;	
+}
+
+.modal .dots .pts-dot:hover, .modal .dots .phd-dot:hover, .modal .dots .chances-dot:hover {
+	color: #02c8a7;
+}
+
+img.pts-img, img.phd-img, img.chances-img {
+	position: fixed;
+	
+	opacity: 0;
+   -webkit-transition: opacity 0.5s linear;
+   -moz-transition: opacity 0.5s linear;
+   -o-transition: opacity 0.5s linear;
+   transition: opacity 0.5s linear;
+}

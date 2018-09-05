@@ -1,0 +1,132 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+<title> Larisse | Full Stack Developer </title>
+<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+<h2 class="title">
+	What I Made
+</h2>
+
+<main class="row gallery">
+	<div class="gallery-item col-sm-12 col-md-4" id="pts">
+		<img src="resources/img/pts-logo.png" /><br/>
+		<p class="gallery-item-title">
+			Project Tracking System
+		</p>
+		<p class="project-role">
+			Front-End and Back-end Developer in a team of 3
+		</p>
+		<p>
+			Mock web app for managing status and budget allocation of PCHRD projects. Created using CodeIgniter.
+		</p>
+	</div>
+	
+	<div class="gallery-item col-sm-12 col-md-4" id="phd">
+		<img src="resources/img/phd-logo.png" /><br/>
+		<p class="gallery-item-title">
+			Philippine Hospital Database
+		</p>
+		<p class="project-role">
+			Back-end Developer in a team of 9
+		</p>
+		<p>
+			Web app that stores information about hospitals and their personnels
+		</p>
+	</div>
+	
+	<div class="gallery-item col-sm-12 col-md-4" id="chances">
+		<img src="resources/img/chances-logo.png" /><br/>
+		<p class="gallery-item-title">
+			Chances
+		</p>
+		<p class="project-role">
+			Back-end Developer and Character Design in a team of 5
+		</p>
+		<p>
+			Sidescroller game written in Java about a guy looking for his past love
+		</p>
+	</div>
+</main>
+
+<div id="pts-modal" class="modal" aria-hidden>
+	<div class="modal-content">
+		<img src="resources/img/pts-home.png" class="pts-img"/>
+		<img src="resources/img/pts-dash.png" class="pts-img"/>
+		<img src="resources/img/pts-search.png" class="pts-img"/>
+		<img src="resources/img/pts-alloc.png" class="pts-img"/>
+		
+		<a class="prev" id="pts-prev" onclick="adjImg(-1, 'pts');">&#10094;</a>
+		<a class="next" id="pts-next" onclick="adjImg(1, 'pts');">&#10095;</a>
+		
+		<div class="dots">
+			<a class="pts-dot" onclick="getImg(0, 'pts');" onmouseover="fillDot(0, 'pts');" onmouseout="clearDot(0, 'pts');"> </a>
+			<a class="pts-dot" onclick="getImg(1, 'pts');" onmouseover="fillDot(1, 'pts');" onmouseout="clearDot(1, 'pts');"> </a>
+			<a class="pts-dot" onclick="getImg(2, 'pts');" onmouseover="fillDot(2, 'pts');" onmouseout="clearDot(2, 'pts');"> </a>
+			<a class="pts-dot" onclick="getImg(3, 'pts');" onmouseover="fillDot(3, 'pts');" onmouseout="clearDot(3, 'pts');"> </a>
+		</div>
+	</div>
+</div>
+
+<div id="phd-modal" class="modal" aria-hidden>
+	<div class="modal-content">
+		<img src="resources/img/phd-home.png" class="phd-img"/>
+		<img src="resources/img/phd-search.png" class="phd-img"/>
+		<img src="resources/img/phd-about.png" class="phd-img"/>
+		
+		<a class="prev" id="phd-prev" onclick="adjImg(-1, 'phd');">&#10094;</a>
+		<a class="next" id="phd-next" onclick="adjImg(1, 'phd');">&#10095;</a>
+		
+		<div class="dots">
+			<a class="phd-dot" onclick="getImg(0, 'phd');" onmouseover="fillDot(0, 'phd');" onmouseout="clearDot(0, 'phd');"> </a>
+			<a class="phd-dot" onclick="getImg(1, 'phd');" onmouseover="fillDot(1, 'phd');" onmouseout="clearDot(1, 'phd');"> </a>
+			<a class="phd-dot" onclick="getImg(2, 'phd');" onmouseover="fillDot(2, 'phd');" onmouseout="clearDot(2, 'phd');"> </a>
+		</div>
+	</div>
+</div>
+
+<div id="chances-modal" class="modal" aria-hidden>
+	<div class="modal-content">
+		<img src="resources/img/chances-home.png" class="chances-img"/>
+		<img src="resources/img/chances-game.gif" class="chances-img"/>
+		
+		<a class="prev" id="chances-prev" onclick="adjImg(-1, 'chances');">&#10094;</a>
+		<a class="next" id="chances-next" onclick="adjImg(1, 'chances');">&#10095;</a>
+		
+		<div class="dots">
+			<a class="chances-dot" onclick="getImg(0, 'chances');" onmouseover="fillDot(0, 'chances');" onmouseout="clearDot(0, 'chances');"> </a>
+			<a class="chances-dot" onclick="getImg(1, 'chances');" onmouseover="fillDot(1, 'chances');" onmouseout="clearDot(1, 'chances');"> </a>
+		</div>
+	</div>
+</div>
+
+<nav class="sticky row">
+	<a href="index.html" class="col-sm-4 col-md">
+		<span class="icon" aria-hidden>
+			<span class="fas fa-fw fa-home" aria-hidden></span>
+		</span>
+		Home
+	</a>
+	<a href="projects.html" class="current col-sm-4 col-md">
+		<span class="icon" aria-hidden>
+			<span class="fas fa-fw fa-code" aria-hidden></span>
+		</span>
+		Projects
+	</a>
+	<a href="contact.html" class="col-sm-4 col-md">
+		<span class="icon" aria-hidden>
+			<span class="fas fa-fw fa-comment" aria-hidden></span>
+		</span>
+		Contact
+	</a>
+</nav>
+
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+<script src="resources/js/modals.js"></script>
+</body>
+</html>
